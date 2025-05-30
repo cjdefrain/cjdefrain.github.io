@@ -3,60 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <title>Connor DeFrain — Crypto Research</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
   <style>
     body {
       background-color: #000;
       color: #fff;
-      font-family: sans-serif;
-      max-width: 700px;
-      margin: 50px auto;
+      font-family: 'IBM Plex Sans', sans-serif;
+      max-width: 800px;
+      margin: 60px auto;
       padding: 0 20px;
-      line-height: 1.6;
+      line-height: 1.8;
     }
     h1 {
-      font-size: 28px;
+      font-size: 32px;
       margin-bottom: 0.5em;
+      font-weight: normal;
     }
     h2 {
-      margin-top: 40px;
+      margin-top: 60px;
+      font-size: 20px;
+      letter-spacing: 0.5px;
+      font-weight: normal;
     }
     a {
       color: #fff;
       text-decoration: underline;
+      font-weight: normal;
     }
     a:hover {
-      color: #999;
+      color: #aaa;
     }
-    ul {
-      padding-left: 20px;
+    .project-block {
+      margin-bottom: 50px;
+    }
+    .label {
+      margin: 5px 0 5px 20px;
     }
   </style>
 </head>
 <body>
   <h1>Connor DeFrain</h1>
-  <p>Student analyst focused on DeFi & the structure of crypto markets</p>
+  <p>Student analyst focused on DeFi & the structure of crypto markets. This is a proof-of-work space for my research, data storytelling, and ideas I care about enough to build.</p>
 
-  <h2>Exodus Project</h2>
-  <p style="margin-bottom: 5px;">
-    <a href="https://cjdefrain.github.io/exodus.pdf" target="_blank" style="font-size: 18px; text-decoration: underline;">
-      Read the PDF
-    </a>
-  </p>
+  <div class="project-block">
+    <h2>Exodus Project</h2>
+    <div class="label">↳ <a href="https://cjdefrain.github.io/exodus.pdf" target="_blank">PDF</a></div>
+  </div>
 
-  <hr style="margin: 40px 0; border: none; border-top: 1px solid #444;">
-
-  <h2>Research & Dashboards</h2>
-  <ul>
-    <li>
-      Stablecoin Evolution:
-      <a href="https://cjdefrain.github.io/stablecoin_evolution.pdf" target="_blank">PDF</a> |
+  <div class="project-block">
+    <h2>Stablecoin Evolution</h2>
+    <div class="label">↳ <a href="https://cjdefrain.github.io/stablecoin_evolution.pdf" target="_blank">PDF</a> | 
       <a href="https://dune.com/cjdefrain/stablecoin-demand-and-usage" target="_blank">Dashboard</a>
-    </li>
-    <li>
-      Restaking Convergence:
-      <a href="https://cjdefrain.github.io/restaking_convergence.pdf" target="_blank">PDF</a> |
+    </div>
+  </div>
+
+  <div class="project-block">
+    <h2>Restaking Convergence</h2>
+    <div class="label">↳ <a href="https://cjdefrain.github.io/restaking_convergence.pdf" target="_blank">PDF</a> | 
       <a href="https://dune.com/cjdefrain/ethereum-yield-stack" target="_blank">Dashboard</a>
-    </li>
-  </ul>
+    </div>
+  </div>
 </body>
 </html>
