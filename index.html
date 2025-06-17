@@ -16,14 +16,11 @@
       position: relative;
       overflow-x: hidden;
     }
-    
+
     body::before {
       content: '';
       position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      top: 0; left: 0; right: 0; bottom: 0;
       background: 
         radial-gradient(ellipse at top left, rgba(75, 0, 130, 0.15) 0%, transparent 50%),
         radial-gradient(ellipse at bottom right, rgba(25, 25, 112, 0.15) 0%, transparent 50%),
@@ -31,78 +28,61 @@
       pointer-events: none;
       z-index: -1;
     }
-    
+
     h1 {
       font-size: 32px;
       margin-bottom: 10px;
       font-weight: 400;
-      font-weight: 400;
     }
-    
+
     .subtitle {
       color: #999;
       margin-bottom: 40px;
     }
-    
-    .featured-card {
+
+    .featured-card, .card {
       border: 1px solid #333;
-      padding: 40px;
       background-color: rgba(10, 10, 10, 0.8);
       backdrop-filter: blur(10px);
+      padding: 40px;
       margin-bottom: 25px;
       transition: all 0.3s ease;
       position: relative;
     }
-    
-    .featured-card:hover {
+
+    .featured-card:hover, .card:hover {
       border-color: #666;
       background-color: rgba(15, 15, 15, 0.9);
       box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
     }
-    
+
     .projects-row {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 25px;
       margin-bottom: 25px;
     }
-    
-    .card {
-      border: 1px solid #333;
-      padding: 30px;
-      background-color: rgba(10, 10, 10, 0.8);
-      backdrop-filter: blur(10px);
-      transition: all 0.3s ease;
-      position: relative;
-    }
-    
-    .card:hover {
-      border-color: #666;
-      background-color: rgba(15, 15, 15, 0.9);
-      transform: translateY(-2px);
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
-    }
-    
+
     .card h3, .featured-card h3 {
       font-size: 20px;
-      margin: 0 0 15px 0;
+      margin-bottom: 15px;
       font-weight: 400;
       letter-spacing: 0.5px;
     }
-    
+
     .card p, .featured-card p {
       color: #ccc;
-      margin: 0 0 20px 0;
+      margin-bottom: 20px;
       font-size: 14px;
       line-height: 1.8;
     }
-    
+
     .links {
       display: flex;
       gap: 12px;
       flex-wrap: wrap;
     }
-    
+
     .links a {
       color: #fff;
       text-decoration: none;
@@ -110,11 +90,10 @@
       border: 1px solid #444;
       font-size: 13px;
       transition: all 0.3s ease;
-      display: inline-block;
       position: relative;
       overflow: hidden;
     }
-    
+
     .links a::before {
       content: '';
       position: absolute;
@@ -126,29 +105,29 @@
       transition: left 0.3s ease;
       z-index: -1;
     }
-    
+
     .links a:hover {
       color: #000;
       border-color: #fff;
     }
-    
+
     .links a:hover::before {
       left: 0;
     }
-    
+
     .links a.live {
       border-color: #4CAF50;
       color: #4CAF50;
     }
-    
+
     .links a.live::before {
       background: #4CAF50;
     }
-    
+
     .links a.live:hover {
       color: #000;
     }
-    
+
     .top-right {
       position: absolute;
       top: 20px;
@@ -157,7 +136,7 @@
       display: flex;
       gap: 20px;
     }
-    
+
     .top-right a {
       color: #999;
       text-decoration: none;
@@ -165,21 +144,19 @@
       border-bottom: 1px solid rgba(153, 153, 153, 0.3);
       padding-bottom: 1px;
     }
-    
+
     .top-right a:hover {
       color: #fff;
       border-bottom-color: rgba(255, 255, 255, 0.5);
     }
-    
+
     @media (max-width: 768px) {
       .projects-row {
         grid-template-columns: 1fr;
       }
-      
       .featured-card {
         padding: 30px;
       }
-      
       .top-right {
         gap: 15px;
       }
@@ -191,20 +168,20 @@
     <a href="https://x.com/connordefrain_" target="_blank">X</a>
     <a href="https://www.linkedin.com/in/connordefrain/" target="_blank">LinkedIn</a>
   </div>
-  
+
   <h1>Connor DeFrain</h1>
   <p class="subtitle">Student analyst focused on DeFi & the structure of crypto markets</p>
-  
+
   <div class="featured-card">
     <h3>Stablecoin Evolution</h3>
     <p>Analysis of stablecoin adoption patterns across major blockchains, tracking the shift from speculative DeFi to real payment infrastructure, including Maker and Aave. The TRON dashboard gives geographic visualization of USDT merchant adoption on TRON, providing insights into global payment flows and merchant distribution patterns</p>
     <div class="links">
       <a href="https://cjdefrain.github.io/stablecoin_evolution.pdf">Research PDF</a>
       <a href="https://dune.com/cjdefrain/stablecoin-demand-and-usage">Dune Dashboard</a>
-      <a href="https://merchant-dashboard.streamlit.app/" class="live">TRON Dashboard</a>
+      <a href="https://merchant-tracker.streamlit.app" class="live">TRON Dashboard</a>
     </div>
   </div>
-  
+
   <div class="projects-row">
     <div class="card">
       <h3>Exodus Project</h3>
@@ -213,7 +190,7 @@
         <a href="https://cjdefrain.github.io/exodus.pdf">Research PDF</a>
       </div>
     </div>
-    
+
     <div class="card">
       <h3>Restaking Convergence</h3>
       <p>Analysis of how liquid staking and EigenLayer are creating recursive yield systems on Ethereum. Staked ETH now backs multiple protocols simultaneously while maintaining base layer security providing capital efficiency through reuse rather than dilution</p>
@@ -223,7 +200,7 @@
       </div>
     </div>
   </div>
-  
+
   <div class="card">
     <h3>Macro Event Impact Analyzer</h3>
     <p>Dashboard tracking Bitcoin and Ethereum price correlation to CPI, NFP, and FOMC announcements. Shows historical impact of macro events on crypto markets. Still a work in progress.</p>
